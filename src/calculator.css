@@ -1,0 +1,62 @@
+*,*::before,*::after
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height:100vh;
+    background-image: url('https://images.unsplash.com/photo-1587145820266-a5951ee6f620?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.calculator-grid
+{
+    display:grid;
+    grid-template-columns: repeat(4,6rem);
+    grid-template-rows:  minmax(8rem,auto) repeat(5,6rem);
+   
+}
+
+.span-2
+{
+    grid-column:span 2;
+}
+
+.output
+{
+    grid-column: 1 / -1;
+    background-color: rgba(0,0,0,0.75);
+    color:white;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 1.5rem;
+    font-size: x-large;
+}
+.previous-operand
+{
+    color:grey;
+    margin-bottom: 0.7rem;
+}
+.calculator-grid > button
+{
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 4%;
+    transition: background-color 0.3s ease-in;
+}
+.calculator-grid > button:hover
+{
+    color: white;
+    background-color: rgba(0,0,0,0.2);
+}
+
